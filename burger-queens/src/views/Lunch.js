@@ -2,6 +2,8 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import OrderDetail from '../components/OrderDetail'
 import './Lunch.css';
+import '../components/Button.css'
+import Button from '../components/Button';
 import MenuItem  from '../components/MenuItem'
 import InputClient  from '../components/InputClient'
 import { Link } from "react-router-dom";
@@ -18,9 +20,10 @@ function Lunch() {
     return (
         <div>
             <Navigation home="INICIO" pending="PENDIENTES" records="HISTORIAL"/>
-
-            <Link to="/breakfast"> <button type="button"> DESAYUNO </button></Link>
-		    <Link to="/lunch"><button type="button"> ALMUERZO Y CENA</button></Link>
+            <div className='btnMenu'>
+            <Link to="/breakfast"> <Button name='DESAYUNO' btnClass= 'btnLarge btnYellow' /></Link>
+            <Link to="/lunch"><Button name='ALMUERZO' btnClass= 'btnLarge btnGray' /></Link>
+        </div>
 
             <InputClient />
 
